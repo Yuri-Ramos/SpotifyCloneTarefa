@@ -1,8 +1,9 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { StatusBar } from 'expo-status-bar';
+import { useNavigation } from "@react-navigation/native-stack";
 import { StyleSheet, Text, View } from 'react-native';
 import { LoginButton } from '../components/Button';
-export default function SignupScreen(navigation) {
+export  function SignupScreen () {
+  const navigation = useNavigation();
   return (
     <>
     <View>
@@ -11,18 +12,18 @@ export default function SignupScreen(navigation) {
    
       </Text>
     </View>
-      <StatusBar style="auto" />
+      
       <View style={styles.container}>
         <View style={styles.containerTitle}> 
         <FontAwesome style={styles.logo} name="spotify" size={65} color="#fff" />
         <Text style={styles.title}>Millions of songs.</Text>
         <Text style={styles.title}>Free on Music</Text>
-
         </View>
+
         <View style={styles.containerButton}>
           <LoginButton color="primary" title="Sign up free"
           onPress={() => {
-            navigation.navigate('SignupForm');
+            navigation.navigate("SignupForm");
           }} 
           />
           <LoginButton color="secondary" title="Continue with Google" icon={<FontAwesome name="google" size={24} color="#fff" />} />
