@@ -1,4 +1,4 @@
 
-export { SignupFormScreen } from "./SignupFormScreen";
+export { CreateAccountScreen } from "./CreateAccountScreen";
 export { SignupScreen } from "./SignupScreen";
 

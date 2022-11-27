@@ -1,18 +1,12 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { useNavigation } from "@react-navigation/native-stack";
+
+import { useNavigation } from "@react-navigation/native";
 import { StyleSheet, Text, View } from 'react-native';
 import { LoginButton } from '../components/Button';
-export  function SignupScreen () {
+export function SignupScreen (){
   const navigation = useNavigation();
   return (
-    <>
-    <View>
-      <Text>
-
-   
-      </Text>
-    </View>
-      
+          
       <View style={styles.container}>
         <View style={styles.containerTitle}> 
         <FontAwesome style={styles.logo} name="spotify" size={65} color="#fff" />
@@ -23,7 +17,7 @@ export  function SignupScreen () {
         <View style={styles.containerButton}>
           <LoginButton color="primary" title="Sign up free"
           onPress={() => {
-            navigation.navigate("SignupForm");
+            navigation.navigate("CreateAccount");
           }} 
           />
           <LoginButton color="secondary" title="Continue with Google" icon={<FontAwesome name="google" size={24} color="#fff" />} />
@@ -33,7 +27,7 @@ export  function SignupScreen () {
         </View>
 
       </View>
-    </>
+    
   );
 }
 
