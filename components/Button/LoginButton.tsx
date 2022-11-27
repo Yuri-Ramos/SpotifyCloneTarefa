@@ -1,14 +1,14 @@
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
+import { StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from "react-native";
 
 interface IloginButtonProps {
     title: string;
     icon?: any;
     color: "primary" | "secondary" | "clear";
-
+    onPress?: () => void;
 }
 
 export const LoginButton = (props: IloginButtonProps) => {
-    const { title, icon, color } = props;
+    const { title, icon, color, onPress } = props;
 
     const containerStyle: ViewStyle[] = [styles.container];
     const titleStyle: TextStyle[] = [styles.title];
@@ -26,11 +26,11 @@ export const LoginButton = (props: IloginButtonProps) => {
      }
 
     return (
-        <View style={containerStyle}>
+        <TouchableOpacity style={containerStyle} onPress={onPress}>
             {/* adicionando style no icone */}
             {icon && <View style={styles.iconContainer}>{icon}</View>}
             <Text style={titleStyle}> {title} </Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 const styles = StyleSheet.create({
