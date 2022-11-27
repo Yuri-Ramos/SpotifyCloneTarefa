@@ -6,5 +6,5 @@ export type MainStacknavigatorParamList ={
 }
 
 export type SignupScreenNavigationProp = NativeStackNavigationProp<
-MainStacknavigatorParamList, 'Signup
+MainStacknavigatorParamList, 'Signup'
 >;
